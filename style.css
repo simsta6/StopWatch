@@ -1,0 +1,106 @@
+body {
+  background-color: #2c3347;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 48px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+
+  text-align: center;
+  line-height: 59px;
+
+  padding: 0 64px;
+  margin: 0;
+}
+
+.stopwatch {
+  display: grid;
+  justify-items: center;
+  grid-row-gap: 23px;
+  width: 100%;
+  padding-top: 100px;
+  position: relative;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 270px;
+  width: 270px;
+  border: 2px solid;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.time {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 48px;
+  position: absolute;
+}
+
+.photo {
+  width: 150px;
+  opacity: 0.1;
+  filter: brightness(0) invert(1);
+}
+
+.icon {
+  display: none;
+  margin-inline: 10px;
+  width: 40px;
+  opacity: 0.9;
+  filter: brightness(0) invert(1);
+}
+
+input[type="number"] {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 18px;
+  width: 24px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+p {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+
+  width: 187px;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+  border: none;
+  margin: 0;
+  outline: none;
+}
+
+#playButton {
+  display: block;
+}
+
+#pauseButton {
+  display: none;
+}

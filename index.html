@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;1,300&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+    <div class="stopwatch" >
+        
+        <button class="circle" id="circleButton">
+            <span class="time" id="display">00:00:00</span> 
+            <img class="photo" id="playPauseButton" src="./src/play.svg" />                     
+        </button>
+
+        <div style="height: 40px; margin-top: 10px;">
+            <img class="icon" id="stopButton" src="./src/stop.svg" />
+            <img class="icon" id="resetButton" src="./src/reload.svg" />   
+        </div>
+
+        <div>
+            <p>
+                <input type="number" id="minutesInput" min="0" max="100" value="55">
+                :
+                <input type="number" id="secondsInput" min="0" max="59" value="00">
+            </p>
+        </div>
+    
+        <div>
+            <input type="range" min="1" max="100" value="100" class="slider" id="audioVolume">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
