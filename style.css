@@ -42,12 +42,6 @@ h1 {
   position: absolute;
 }
 
-.photo {
-  width: 150px;
-  opacity: 0.1;
-  filter: brightness(0) invert(1);
-}
-
 .icon {
   display: none;
   margin-inline: 10px;
@@ -81,13 +75,6 @@ p {
   font-size: 18px;
 }
 
-.controls {
-  display: flex;
-  justify-content: space-between;
-
-  width: 187px;
-}
-
 button {
   cursor: pointer;
   background: transparent;
@@ -95,14 +82,6 @@ button {
   border: none;
   margin: 0;
   outline: none;
-}
-
-#playButton {
-  display: block;
-}
-
-#pauseButton {
-  display: none;
 }
 
 .button.play {
