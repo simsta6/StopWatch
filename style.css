@@ -104,3 +104,26 @@ button {
 #pauseButton {
   display: none;
 }
+
+.button.play {
+  width: 160px;
+  height: 160px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 80px 0px 80px 160px;
+  border-color: transparent transparent transparent rgb(0, 0, 0, 0.3);
+}
+
+.button.pause {
+  width: 0px;
+  height: 160px;
+  border-color: rgb(0, 0, 0, 0.3);
+  border-style: double;
+  border-width: 0px 0px 0px 120px;
+}
+
+.button.stop {
+  width: 160px;
+  height: 160px;
+  background: rgb(0, 0, 0, 0.3);
+}

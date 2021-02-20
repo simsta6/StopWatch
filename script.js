@@ -1,27 +1,25 @@
-const playIcon = './src/play.svg';
-const pauseIcon = './src/pause.svg';
-const stopIcon = './src/stop.svg';
+const playButtonCss = 'button play';
+const pauseButtonCss = 'button pause';
+const stopButtonCss = 'button stop';
 
-const playPauseButton = document.getElementById('playPauseButton');
 let stopWacthSarted = false;
-
-const stopButton = document.getElementById('stopButton');
-stopButton.addEventListener('click', stop);
 
 const resetButton = document.getElementById('resetButton');
 resetButton.addEventListener('click', reset);
 
-const circleButton = document.getElementById('circleButton');
-circleButton.addEventListener('click', () => {
+const mainButton = document.getElementById('mainButton');
+
+//perkelt į normalią funkciją
+mainButton.addEventListener('click', () => {
     if (!audio.paused && stopWacthSarted) {
         reset();
     } else if (stopWacthSarted) {
         stopWacthSarted = false;
-        playPauseButton.src = playIcon;
+        mainButton.className = playButtonCss;
         pause();
     } else {
         stopWacthSarted = true;
-        playPauseButton.src = pauseIcon;
+        mainButton.className = pauseButtonCss;
         resetButton.style.display = "inline";
         start();
     }
@@ -51,8 +49,7 @@ function start() {
         if (elapsedTime >= timeTarget) {
             audio.play();
             pause();
-            playPauseButton.src = stopIcon;
-            stopButton.style.display = "inline";
+            mainButton.className = stopButtonCss;
         }
     }, 10)
 }
@@ -64,9 +61,8 @@ function pause() {
 function reset() {
     // TODO: sutvarkyt iconų rodymą
     resetButton.style.display = "none";
-    stopButton.style.display = "none";
     stopWacthSarted = false;
-    playPauseButton.src = playIcon;
+    mainButton.className = playButtonCss;
     clearInterval(timeInterval);
     elapsedTime = 0;
     display.innerHTML = printTime(elapsedTime);
@@ -76,10 +72,9 @@ function reset() {
 }
 
 function stop() {
-    stopButton.style.display = "none";
     clearInterval(timeInterval);
     stopWacthSarted = false;
-    playPauseButton.src = playIcon;
+    mainButton.className = playButtonCss;
     audio.pause();
     audio.currentTime = 0;
 }
